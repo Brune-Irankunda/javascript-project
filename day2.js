@@ -65,3 +65,22 @@ switch (day.toLowerCase()) {
     default:
         console.log("Invalid day");
 }
+
+// 5. COUNTDOWN
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
+}
+
+//6. SUM AND AVERAGE USING FOR...OF
+const numbers = [45, 78, 90, 62, 88];
+let sum = 0;
+
+for (const value of numbers) {
+    sum += value;
+}
+
+const average = sum / numbers.length;
+
+console.log("Sum:", sum);
+console.log("Average:", average);
+
