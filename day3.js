@@ -71,3 +71,25 @@ console.log("\n5. Get Grade:");
 console.log(getGrade(95));    
 console.log(getGrade(65));  
 console.log(getGrade(101)); 
+
+// 6. max(...numbers) — WITHOUT Math.max
+function max(...numbers) {
+    if (numbers.length === 0) {
+        return undefined;
+    }
+
+    let largest = numbers[0];
+
+    for (const number of numbers) {
+        if (number > largest) {
+            largest = number;
+        }
+    }
+
+    return largest;
+}
+
+console.log("\n6. Maximum Number:");
+console.log(max(4, 9, 2));      
+console.log(max(-5, -2, -10));   
+console.log(max()); 
