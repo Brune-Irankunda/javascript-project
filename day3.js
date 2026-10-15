@@ -112,3 +112,17 @@ console.log("\n8. Count Vowels:");
 console.log(countVowels("Kigali"));       
 console.log(countVowels("EDUCATION"));    
 console.log(countVowels("rhythm")); 
+
+// 9. isPalindrome(word)
+
+function isPalindrome(word) {
+    const cleanedWord = word.toLowerCase();
+    const reversedWord = cleanedWord.split("").reverse().join("");
+
+    return cleanedWord === reversedWord;
+}
+
+console.log("\n9. Is Palindrome:");
+console.log(isPalindrome("racecar"));  
+console.log(isPalindrome("hello"));    
+console.log(isPalindrome(""));      
