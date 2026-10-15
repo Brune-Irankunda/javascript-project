@@ -93,3 +93,22 @@ console.log("\n6. Maximum Number:");
 console.log(max(4, 9, 2));      
 console.log(max(-5, -2, -10));   
 console.log(max()); 
+
+// 8. countVowels(text)    
+function countVowels(text) {
+    let count = 0;
+    const vowels = "aeiou";
+
+    for (const character of text.toLowerCase()) {
+        if (vowels.includes(character)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log("\n8. Count Vowels:");
+console.log(countVowels("Kigali"));       
+console.log(countVowels("EDUCATION"));    
+console.log(countVowels("rhythm")); 
