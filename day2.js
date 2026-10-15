@@ -22,3 +22,46 @@ if (score < 0 || score > 100) {
 } else {
     console.log("F");
 }
+
+// 3. TICKET PRICE
+let age = 20;
+let isStudent = true;
+let ticketPrice;
+
+if (age > 65) {
+    ticketPrice = 0;
+} else if (age < 12) {
+    ticketPrice = 2000;
+} else if (isStudent) {
+    ticketPrice = 3000;
+} else {
+    ticketPrice = 5000;
+}
+
+console.log("Ticket price:", ticketPrice, "RWF");
+
+// 4. DAY PLANNER
+let day = "Monday";
+switch (day.toLowerCase()) {
+    case "monday":
+        console.log("Monday: Programming class");
+        break;
+    case "tuesday":
+        console.log("Tuesday: Computer Networks");
+        break;
+    case "wednesday":
+        console.log("Wednesday: Database class");
+        break;
+    case "thursday":
+        console.log("Thursday: Cybersecurity class");
+        break;
+    case "friday":
+        console.log("Friday: Practical exercises");
+        break;
+    case "saturday":
+    case "sunday":
+        console.log("No class");
+        break;
+    default:
+        console.log("Invalid day");
+}
