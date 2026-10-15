@@ -146,3 +146,62 @@ repeatAction(2, (round) => {
 
 repeatAction(0, (round) => {
     console.log("Third test, round:", round);
+
+    // 11. createCounter(start = 0) — CLOSURE
+    function createCounter(start = 0) {
+    let count = start;
+
+    return {
+        increment: function () {
+            count++;
+            return count;
+        },
+
+        decrement: function () {
+            count--;
+            return count;
+        },
+
+        getValue: function () {
+            return count;
+        }
+    };
+}
+
+console.log("\n11. Create Counter:");
+
+const counter1 = createCounter(5);
+console.log(counter1.increment());  
+console.log(counter1.decrement());  
+console.log(counter1.getValue());   
+
+const counter2 = createCounter();
+console.log(counter2.getValue());   
+console.log(counter2.increment());  
+console.log(counter2.increment());  
+
+const counter3 = createCounter(-1);
+console.log(counter3.getValue());   
+console.log(counter3.decrement());  
+console.log(counter3.getValue());   
+
+// 12. makeDiscount(percent) — CLOSURE
+function makeDiscount(percent) {
+    return function (price) {
+        return price - (price * percent / 100);
+    };
+}
+
+console.log("\n12. Make Discount:");
+
+// Test 1: 10% discount
+const discount10 = makeDiscount(10);
+console.log(discount10(1000));  
+
+// Test 2: 20% discount
+const discount20 = makeDiscount(20);
+console.log(discount20(5000));  
+
+// Test 3: Edge case — 0% discount
+const discount0 = makeDiscount(0);
+console.log(discount0(1000));  
