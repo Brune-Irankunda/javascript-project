@@ -17,3 +17,5 @@ console.log("\n2. Is Even:");
 console.log(isEven(8)); 
 console.log(isEven(5));   
 console.log(isEven(0)); 
+
+// 3. CELSIUS AND FAHRENHEIT CONVERTERS
