@@ -84,3 +84,23 @@ const average = sum / numbers.length;
 console.log("Sum:", sum);
 console.log("Average:", average);
 
+// 7. FIND THE FIRST NUMBER GREATER THAN 100
+const values = [20, 45, 101, 150, 200];
+
+for (const value of values) {
+    if (value > 100) {
+        console.log("First number greater than 100:", value);
+        break;
+    }
+}
+// 8. SKIP NEGATIVES USING CONTINUE
+const mixedNumbers = [-5, 10, -3, 20, 0, 15];
+
+for (const value of mixedNumbers) {
+    if (value < 0) {
+        continue;
+    }
+
+    console.log(value);
+}
+
