@@ -38,3 +38,14 @@ console.log(fahrenheitToCelsius(212));
 console.log(fahrenheitToCelsius(-40));  
 
 // 4. formatPrice(amount, currency = "RWF")
+function formatPrice(amount, currency = "RWF") {
+    return amount.toLocaleString("en-RW", {
+        style: "currency",
+        currency: currency
+    });
+}
+
+console.log("\n4. Format Price:");
+console.log(formatPrice(5000));          // Default RWF
+console.log(formatPrice(1234567.5));     // Large amount
+console.log(formatPrice(0, "USD"));
