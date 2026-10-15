@@ -104,3 +104,24 @@ for (const value of mixedNumbers) {
     console.log(value);
 }
 
+// 9. MULTIPLICATION TABLE OF 7
+
+for (let i = 1; i <= 12; i++) {
+    console.log(`7 x ${i} = ${7 * i}`);
+}
+
+// 10. FIZZBUZZ WITH KIGALI
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 7 === 0) {
+        console.log("Kigali");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
