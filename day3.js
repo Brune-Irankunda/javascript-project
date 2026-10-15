@@ -126,3 +126,23 @@ console.log("\n9. Is Palindrome:");
 console.log(isPalindrome("racecar"));  
 console.log(isPalindrome("hello"));    
 console.log(isPalindrome(""));      
+
+// 10. repeatAction(times, callback)
+function repeatAction(times, callback) {
+    for (let round = 1; round <= times; round++) {
+        callback(round);
+    }
+}
+
+console.log("\n10. Repeat Action:");
+
+repeatAction(3, (round) => {
+    console.log("First test, round:", round);
+});
+
+repeatAction(2, (round) => {
+    console.log("Second test, round:", round);
+});
+
+repeatAction(0, (round) => {
+    console.log("Third test, round:", round);
